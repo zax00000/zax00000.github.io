@@ -136,7 +136,7 @@ const PROJECTS = [
     duration: "3 weeks",
     team: "12 people (only programmer)",
     role: "Programmer — Enemy AI & UI",
-    engine: "Unity (C#)",
+    engine: "Unity 6 (C#)",
     platforms: ["Windows"],
     summary:
       "A surreal 3D action-platformer about facing your inner monsters: move, dash, " +
