@@ -19,15 +19,21 @@ All content lives in **`js/data.js`**: name, links, skills, education and every 
 | Page title and link-preview text | top of `index.html` |
 | Colours and spacing | `:root` block at the top of `css/styles.css` |
 
-Then publish:
+Then bump the cache-busting version and publish:
 
 ```bash
+sed -i "s/?v=[0-9]*/?v=$(date +%Y%m%d%H%M)/g" index.html
 git add -A
 git commit -m "Update portfolio"
 git push
 ```
 
 GitHub Pages redeploys automatically; changes are live within a minute or two.
+
+The `sed` line matters: GitHub Pages tells browsers to cache files for 10 minutes, so
+anyone who visited recently would otherwise keep seeing the old `data.js`. Changing the
+`?v=` number in `index.html` makes the browser treat the files as new. If you still see
+an old version, press **Ctrl + F5**.
 
 ## Adding a project
 
