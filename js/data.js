@@ -275,7 +275,7 @@ const PROJECTS = [
     context: "Futuregames — Team Project 3",
     year: "2026",
     duration: "7 weeks",
-    team: "Cross-discipline (2 programmers)",
+    team: "12 people (2 programmers)",
     role: "Programmer — Multiplayer, Voice & Text Chat",
     engine: "Unreal Engine 5.7 (Blueprints)",
     platforms: ["PC"],
