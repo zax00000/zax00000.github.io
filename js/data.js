@@ -38,8 +38,9 @@ const SITE = {
 
   /* Shown in the About section. Two or three short paragraphs. */
   about: [
-    "I'm a game programmer from Warsaw, in my final year at the Polish-Japanese " +
-      "Academy of Information Technology (PJATK). I've also made three team games " +
+    "I'm a game programmer from Warsaw, in my final year of Computer Science " +
+      "(Multimedia specialization) at the Polish-Japanese Academy of Information " +
+      "Technology (PJATK). I've also made three team games " +
       "at Futuregames — two in Unity and one in Unreal Engine 5.",
     "Most of my work is the part players push against: enemies with readable, " +
       "escalating attack patterns, and the online systems that let friends find each " +
@@ -72,7 +73,7 @@ const TIMELINE = {
     {
       org: "Polish-Japanese Academy of Information Technology (PJATK), Warsaw",
       period: "Final year",
-      title: "University studies",   // add your field of study, e.g. "BSc Computer Science"
+      title: "Computer Science — Multimedia specialization",
     },
     {
       org: "Futuregames",
@@ -274,13 +275,15 @@ const PROJECTS = [
     context: "Futuregames — Team Project 3",
     year: "2026",
     duration: "7 weeks",
+    team: "Cross-discipline (2 programmers)",
     role: "Programmer — Multiplayer, Voice & Text Chat",
     engine: "Unreal Engine 5.7 (Blueprints)",
     platforms: ["PC"],
     summary:
       "A first-person online co-op horror game: players team up in a haunted mansion " +
       "to exorcise the ghost of Elizabeth. Built entirely in Blueprints over seven " +
-      "weeks. I owned the multiplayer layer — the Steam connection that lets friends " +
+      "weeks. As one of two programmers I owned the multiplayer layer — the Steam " +
+      "connection that lets friends " +
       "join each other, the lobby, proximity voice chat and text chat — plus the portal " +
       "system.",
     contributions: [
