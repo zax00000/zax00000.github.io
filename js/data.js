@@ -53,7 +53,7 @@ const SITE = {
    SKILLS — grouped. Add or remove groups freely.
    -------------------------------------------------------------------------- */
 const SKILLS = [
-  { group: "Programming",     items: ["C#", "Unreal Blueprints"] },
+  { group: "Programming",     items: ["C#", "C++", "Unreal Blueprints"] },
   { group: "Engines & Tools", items: ["Unity", "Unreal Engine 5", "DOTween", "Perforce", "Git"] },
   { group: "Enemy AI",        items: ["Behaviour trees", "NavMesh navigation", "Boss attack patterns", "Traps & environmental hazards"] },
   { group: "Multiplayer",     items: ["Steam sessions & friend invites", "Lobby & ready-up", "Replication & server events", "Voice chat (VOIP)", "Text chat"] },
@@ -76,7 +76,7 @@ const TIMELINE = {
     },
     {
       org: "Futuregames",
-      period: "2026",                // add the start year, e.g. "2025 — 2026"
+      period: "2025 — 2026",
       title: "Game Programming",
       meta: "Unity | Unreal Engine 5 | Team projects",
       bullets: [
@@ -131,7 +131,7 @@ const PROJECTS = [
     title: "These Demons of Mine",
     subtitle: "A 3D action-platformer where you fight anxiety, stress and fear made flesh.",
     context: "Futuregames — Team Project 1",
-    year: "2026",
+    year: "2025",
     duration: "3 weeks",
     team: "12 people (only programmer)",
     role: "Programmer — Enemy AI & UI",
