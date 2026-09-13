@@ -187,6 +187,21 @@
     return a;
   }
 
+  /* Readable text for a LinkedIn URL: decodes the handle (%C5%9B -> ś) and drops
+     LinkedIn's generated suffix, which always contains a digit ("-0977b5166"). */
+  function linkedinLabel(url) {
+    try {
+      const handle = decodeURIComponent(new URL(url).pathname)
+        .replace(/\/+$/, "")
+        .split("/")
+        .pop()
+        .replace(/-(?=[0-9a-z]*\d)[0-9a-z]{6,}$/i, "");
+      return handle ? "linkedin.com/in/" + handle : "LinkedIn profile";
+    } catch (e) {
+      return "LinkedIn profile";
+    }
+  }
+
   /* ============================================================== SIDEBAR */
   function renderRail() {
     $$("[data-site]").forEach((node) => {
@@ -219,9 +234,11 @@
     (SITE.roles || []).forEach((r) => chips.appendChild(el("span", null, r)));
 
     /* Contact panel */
+    const L = SITE.links || {};
     const list = $("#contactList");
     const rows = [];
     if (SITE.email)    rows.push(["Email", SITE.email, "mailto:" + SITE.email]);
+    if (L.linkedin)    rows.push(["LinkedIn", linkedinLabel(L.linkedin), L.linkedin]);
     if (SITE.location) rows.push(["Location", SITE.location, null]);
     rows.forEach(([label, value, href]) => {
       const wrap = el("div");
@@ -230,6 +247,7 @@
       if (href) {
         const a = el("a", null, value);
         a.href = href;
+        if (!href.startsWith("mailto:")) { a.target = "_blank"; a.rel = "noopener noreferrer"; }
         dd.appendChild(a);
       } else {
         dd.textContent = value;
@@ -239,7 +257,6 @@
     });
 
     /* Icon links */
-    const L = SITE.links || {};
     const railLinks = $("#railLinks");
     if (L.github)   railLinks.appendChild(iconLink(L.github, "github", "GitHub"));
     if (L.itch)     railLinks.appendChild(iconLink(L.itch, "itch", "itch.io"));
