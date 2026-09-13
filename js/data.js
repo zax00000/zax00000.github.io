@@ -28,7 +28,7 @@ const SITE = {
   links: {
     github: "https://github.com/zax00000",
     itch: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/mateusz-%C5%9Bwiderski-0977b5166/",
     cv: "", // e.g. "assets/cv.pdf"
   },
 
