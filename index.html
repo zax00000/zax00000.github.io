@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== EDIT THESE FOR SEO / LINK PREVIEWS ========================== -->
+<title>Mateusz Świderski — Game Programmer</title>
+<meta name="description" content="Portfolio of Mateusz Świderski, game programmer. Team games made at Futuregames, focused on enemy AI, plus personal projects.">
+<link rel="canonical" href="https://zax00000.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mateusz Świderski — Game Programmer">
+<meta property="og:description" content="Game programmer focused on enemy AI. Team games made at Futuregames plus personal projects.">
+<meta property="og:url" content="https://zax00000.github.io/">
+<meta property="og:image" content="https://zax00000.github.io/assets/games/these-demons-of-mine/thumb.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0d10">
+<!-- =================================================================== -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0d10'/><rect x='11' y='11' width='10' height='10' rx='2' fill='%233ad4ff'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Mobile-only bar. Hidden on desktop, where the rail is always visible. -->
+<header class="topbar" id="topbar">
+  <a class="topbar-brand" href="#top" data-site="name">Mateusz Świderski</a>
+  <button class="topbar-toggle" id="railToggle" aria-label="Menu" aria-expanded="false" aria-controls="rail">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  </button>
+</header>
+
+<div class="layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="rail" id="rail">
+    <div class="rail-inner">
+
+      <div class="rail-id">
+        <div class="avatar" id="avatarSlot"></div>
+        <p class="availability" id="availability"></p>
+        <h1 class="rail-name" data-site="name">Mateusz Świderski</h1>
+        <p class="rail-role" data-site="role">Gameplay &amp; Engine Programmer</p>
+        <div class="rail-chips" id="roleChips"></div>
+      </div>
+
+      <div class="panel">
+        <h2 class="panel-title">Contact</h2>
+        <dl class="contact-list" id="contactList"></dl>
+      </div>
+
+      <nav class="rail-nav" id="railNav" aria-label="Sections">
+        <a href="#work"><span class="idx">01</span> Selected Work</a>
+        <a href="#personal"><span class="idx">02</span> Personal Projects</a>
+        <a href="#skills"><span class="idx">03</span> Tools &amp; Tech</a>
+        <a href="#cv"><span class="idx">04</span> Experience</a>
+        <a href="#about"><span class="idx">05</span> About</a>
+      </nav>
+
+      <div class="rail-links" id="railLinks"></div>
+
+      <p class="rail-foot">&copy; <span id="year"></span> <span data-site="name">Mateusz Świderski</span></p>
+    </div>
+  </aside>
+
+  <!-- ===================== CONTENT ===================== -->
+  <main class="content" id="main">
+
+    <section class="intro" id="top">
+      <div class="intro-glow" aria-hidden="true"></div>
+      <div class="intro-inner">
+        <p class="eyebrow">Portfolio</p>
+        <p class="intro-lead" data-site="tagline"></p>
+        <div class="intro-actions" id="introActions"></div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <span class="eyebrow">01</span>
+        <h2>Selected Work</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="projects-featured" id="featuredProjects"></div>
+    </section>
+
+    <section class="section" id="personal">
+      <div class="section-head">
+        <span class="eyebrow">02</span>
+        <h2>Personal Projects</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="projects-grid" id="personalProjects"></div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head">
+        <span class="eyebrow">03</span>
+        <h2>Tools &amp; Tech</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section class="section" id="cv">
+      <div class="section-head">
+        <span class="eyebrow">04</span>
+        <h2>Experience</h2>
+        <span class="rule"></span>
+      </div>
+      <div id="timeline"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <span class="eyebrow">05</span>
+        <h2>About</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="about-text" id="aboutText"></div>
+    </section>
+
+    <section class="closing" id="contact">
+      <h2>Let's build something.</h2>
+      <p>I'm looking for an internship or a junior programmer role. If you have one, or just want to talk shop, my inbox is open.</p>
+      <div class="closing-actions" id="closingActions"></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===================== PROJECT MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-panel" id="modalPanel">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<noscript>
+  <div style="padding:6rem 1.5rem;text-align:center;color:#93a1b0;font-family:sans-serif">
+    This portfolio needs JavaScript to display projects.
+    You can reach me at <a href="mailto:mateusz.swiderski123@gmail.com" style="color:#3ad4ff">mateusz.swiderski123@gmail.com</a>.
+  </div>
+</noscript>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
